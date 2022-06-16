@@ -1,0 +1,6 @@
+Django
+psycopg2-binary
+Pillow
+requests
+gunicorn==20.1.0
+gunicorn[gevent]

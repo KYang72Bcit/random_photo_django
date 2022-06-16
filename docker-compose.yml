@@ -1,0 +1,38 @@
+version: '3.3'
+
+services:
+  app:
+    build:
+      context: ./src
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+  db:
+    image: "postgres:13.5-alpine"
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
+  nginx:
+    build: 
+      context: ./nginx
+      dockerfile: Dockerfile.prod
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf # map nginx config file
+      - ./nginx/log:/var/log/nginx # map log
+      - static_vol:/usr/share/nginx/static # map static file
+      - media_vol:/usr/share/nginx/media # map media file 
+    ports:
+      - 80:80
+    depends_on:
+      - web 
+
+volumes:
+  static_vol:
+  media_vol:
+      
+
