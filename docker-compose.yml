@@ -24,15 +24,29 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf # map nginx config file
       - ./nginx/log:/var/log/nginx # map log
+      - ssl_cert:/usr/share/nginx/ssl
+      - ./certbot/www:/var/www/certbot/:ro
       - static_vol:/usr/share/nginx/static # map static file
       - media_vol:/usr/share/nginx/media # map media file 
     ports:
       - 80:80
+      - 443:443
     depends_on:
       - web 
+    restart: always
+
+  certbot:
+    image: certbot/certbot:latest
+    volumes:
+      - ./certbot/www/:/var/www/certbot/:rw
+      - ./certbot/log/:/var/log/letsencrypt/
+      - ssl_cert:/var/www/certbot/:rw
+
+  
 
 volumes:
   static_vol:
   media_vol:
+  ssl_cert:
       
 

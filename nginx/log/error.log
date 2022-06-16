@@ -1429,3 +1429,24 @@
 2022/06/16 08:14:21 [error] 26#26: *2 open() "/usr/share/nginx/static//css/album.css" failed (2: No such file or directory), client: 192.168.80.1, server: 127.0.0.1, request: "GET /static/css/album.css HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
 2022/06/16 08:15:49 [error] 27#27: *4 open() "/usr/share/nginx/static//css/album.css" failed (2: No such file or directory), client: 192.168.80.1, server: 127.0.0.1, request: "GET /static/css/album.css HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
 2022/06/16 08:15:49 [error] 27#27: *4 open() "/usr/share/nginx/static//css/album.css" failed (2: No such file or directory), client: 192.168.80.1, server: 127.0.0.1, request: "GET /static/css/album.css HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/06/16 08:43:12 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/06/16 08:43:12 [notice] 25#25: gracefully shutting down
+2022/06/16 08:43:12 [notice] 25#25: exiting
+2022/06/16 08:43:12 [notice] 27#27: gracefully shutting down
+2022/06/16 08:43:12 [notice] 26#26: gracefully shutting down
+2022/06/16 08:43:12 [notice] 28#28: gracefully shutting down
+2022/06/16 08:43:12 [notice] 25#25: exit
+2022/06/16 08:43:12 [notice] 27#27: exiting
+2022/06/16 08:43:12 [notice] 26#26: exiting
+2022/06/16 08:43:12 [notice] 26#26: exit
+2022/06/16 08:43:12 [notice] 28#28: exiting
+2022/06/16 08:43:12 [notice] 27#27: exit
+2022/06/16 08:43:12 [notice] 28#28: exit
+2022/06/16 08:43:12 [notice] 1#1: signal 17 (SIGCHLD) received from 27
+2022/06/16 08:43:12 [notice] 1#1: worker process 27 exited with code 0
+2022/06/16 08:43:12 [notice] 1#1: signal 29 (SIGIO) received
+2022/06/16 08:43:12 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2022/06/16 08:43:12 [notice] 1#1: worker process 25 exited with code 0
+2022/06/16 08:43:12 [notice] 1#1: worker process 26 exited with code 0
+2022/06/16 08:43:12 [notice] 1#1: worker process 28 exited with code 0
+2022/06/16 08:43:12 [notice] 1#1: exit
